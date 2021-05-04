@@ -48,9 +48,17 @@ voting_data.append({"county":"Jefferson", "registered_voters": 432438})
 #print intial dictionary
 print(voting_data)
 
+#prompt user to include el paso or not"
+if input("is El Paso in your state? ") == "yes":
 #insert El Paso into second index in voting data dict
-voting_data.insert(1,{"county":"El Paso", "registered_voters": 461149})
-voting_data.append({"county":counties_added,"registered_voters":counties_vote})
+    voting_data.insert(1,{"county":"El Paso", "registered_voters": 461149})
+    voting_data.append({"county":counties_added,"registered_voters":counties_vote})
+
 
 #print updated dictionary
-print(voting_data)
+    print(voting_data)
+
+#do not update dictionary and add user input
+else:
+    voting_data.append({"county":counties_added,"registered_voters":counties_vote})
+    print(voting_data)
