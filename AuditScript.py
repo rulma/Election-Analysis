@@ -7,7 +7,7 @@ voting_data.append({"county":"Denver", "registered_voters": 463353})
 voting_data.append({"county":"Jefferson", "registered_voters": 432438})
 
 #take a user input 3 times to add to dataset
-for x in range(3):
+for x in range(1):
     counties_added = input(f"Give county name: ")
     counties_vote = input(f"Total Votes: ")
     voting_data.append({"county":counties_added,"registered_voters":counties_vote})
@@ -28,5 +28,4 @@ if input("is El Paso in your state? ") == "yes":
 
 #do not update dictionary and add user input
 else:
-    voting_data.append({"county":counties_added,"registered_voters":counties_vote})
     print(voting_data)
