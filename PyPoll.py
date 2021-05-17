@@ -22,17 +22,15 @@ candidate_votes = {}
 winning_candidate = ""
 winning_count = 0
 winning_percentage = 0
-
-
-with open(file_save, "w") as txt_file:
-    txt_file.write("Counties in the Election\n")
-    txt_file.write("-------------------------\n")
-    txt_file.write("Arapahoe\nDenver\nJefferson")
-
-
+    
 
 #open election results and read file
 with open(file_load) as election_data:
+
+
+
+    # Save the final vote count to the text file.
+      
     file_reader = csv.reader(election_data)
 
     #print header row 
@@ -57,13 +55,29 @@ with open(file_load) as election_data:
         
 
         
-        
+with open(file_save, "w") as txt_file: 
+    election_results = (
+        f"\nElection Results\n"
+        f"-----------------------\n"
+        f"Total Votes: {total_votes:,}\n"
+        f"-----------------------\n"
+    )
+    print(election_results, end = "")
+
+    txt_file.write(election_results)
+
     for candidate_name in candidate_votes:
         votes = candidate_votes[candidate_name]
 
         vote_percentage = float(votes)/float(total_votes) * 100
 
         formatted_vote_percentage = "{:.1f}".format(vote_percentage)
+    
+        candidate_results = (
+        f"{candidate_name}: {vote_percentage:.1f}% ({votes:,})\n"
+        )
+
+        txt_file.write(candidate_results)
 
         #determine winning candidate
         # check if votes are greater than winning count/percent
@@ -76,6 +90,7 @@ with open(file_load) as election_data:
 
 
 
+
         print(f"{candidate_name}: {formatted_vote_percentage}% ({votes:,})\n")
     winning_candidate_summary = (
         f"-------------------------\n"
@@ -84,8 +99,7 @@ with open(file_load) as election_data:
         f"Winning Percentage: {winning_percentage:.1f}%\n"
         f"-------------------------\n")
     print(winning_candidate_summary)
-        
-print(total_votes)
+    
 
 
 
@@ -95,6 +109,6 @@ print(total_votes)
 
 
 
-election_data.close()
+
 
 
