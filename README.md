@@ -8,11 +8,15 @@ The purpose of this election audit analysis was to automate the work of counting
 
 - Number of Votes Cast: 369,711
 - Number of Votes Cast By County:
+
 ![County Breakdown](https://github.com/rulma/Election-Analysis/blob/1fa2f3c0a945e8e84d8cd862fb948bc1626815a1/Resources/County%20Breakdown.PNG)
+
 - County with the Largest Voter Turnout: Denver
 
 - Candidate Vote Breakdown:
 
+![Candidate Breakdown](https://github.com/rulma/Election-Analysis/blob/f3973e0415392d17322dc5d65b6c3d3e199ac996/Resources/Candidate%20Breakdown.PNG)
+
 - Winning Candidate Summary:
 
-
+![Winner Breakdown](https://github.com/rulma/Election-Analysis/blob/f3973e0415392d17322dc5d65b6c3d3e199ac996/Resources/Winner%20Breakdown.PNG)
